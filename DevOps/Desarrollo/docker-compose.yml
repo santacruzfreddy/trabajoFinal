@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   avatars:
@@ -8,6 +8,9 @@ services:
       - "5000:5000"
 
   avatar-frontend:
-    image: avatar-frontend
+    image: avatar-frontend1
     ports:
       - "5173:5173"
+    environment:
+      - VITE_HOST=0.0.0.0
+      - VITE_PORT=5173
