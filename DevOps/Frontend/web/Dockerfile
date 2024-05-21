@@ -18,10 +18,10 @@ ENV VITE_HOST=0.0.0.0
 ENV VITE_PORT=5173
 
 # Expose the port that the application will run on
-EXPOSE 5173
+EXPOSE ${VITE_PORT}
 
 # Build the application
-RUN npm run build
+#RUN npm run build
 
 # Start the application
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "dev"]

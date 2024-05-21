@@ -1,6 +1,10 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 
+console.log("VITE_HOST:", process.env.VITE_HOST);
+console.log("VITE_PORT:", process.env.VITE_PORT);
+console.log("VITE_CLIENT_PORT:", process.env.VITE_CLIENT_PORT);
+
 export default defineConfig({
   logLevel: "info",
 
@@ -11,7 +15,6 @@ export default defineConfig({
     hmr: {
       clientPort: process.env.VITE_CLIENT_PORT || null,
     },
-    port: 5173,
     proxy: {
       "/api": {
         target: "http://avatars:5000",
