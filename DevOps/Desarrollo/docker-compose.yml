@@ -8,9 +8,9 @@ services:
       - "5000:5000"
 
   avatar-frontend:
-    image: avatar-frontend1
-    ports:
-      - "5173:5173"
+    image: avatar-frontend3
     environment:
-      - VITE_HOST=0.0.0.0
-      - VITE_PORT=5173
+      - VITE_HOST=${VITE_HOST}
+      - VITE_PORT=${VITE_PORT}
+    ports:
+      - "${VITE_PORT}:${VITE_PORT}"
